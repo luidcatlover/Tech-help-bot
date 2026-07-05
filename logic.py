@@ -63,7 +63,7 @@ class DB_Manager:
         last_request_time = datetime.fromisoformat(row[0])
         now = datetime.now()
 
-        # проверяем, прошло ли больше 1 часа
+        # проверка, прошло ли больше 1 часа
         return (now - last_request_time) >= timedelta(hours=1)
 
 DATABASE = 'support.db'
